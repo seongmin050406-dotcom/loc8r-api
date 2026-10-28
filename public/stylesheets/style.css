@@ -1,0 +1,415 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: #168b90;
+}
+
+/* 상단 메뉴 */
+.navbar {
+  width: 100%;
+  min-height: 58px;
+  background: #ad192b;
+}
+
+.nav-inner {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 58px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav-about {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-about:hover,
+.brand:hover {
+  color: #eee;
+}
+
+/* 본문 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.location-title {
+  margin: 38px 0 22px;
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.location-address {
+  margin: 0 0 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 장소 상세 페이지의 리뷰 영역 */
+.customer-reviews {
+  margin: 20px 0 35px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.19);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 5px;
+}
+
+.btn-add-review {
+  display: inline-block;
+  padding: 9px 13px;
+  background: #bd172b;
+  border: 1px solid #a91426;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-add-review:hover {
+  background: #941324;
+}
+
+.customer-reviews h2 {
+  margin: 4px 0 10px;
+  color: #17363a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* 리뷰 카드 */
+.review-card {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 30px;
+  padding: 7px 10px;
+  background: rgba(0, 57, 64, 0.55);
+  color: #fff;
+  font-size: 12px;
+}
+
+.review-stars {
+  color: #17343a;
+  white-space: nowrap;
+  letter-spacing: -1px;
+  font-size: 17px;
+}
+
+.review-author {
+  color: #172f33;
+}
+
+.review-date {
+  color: #fff;
+  font-size: 11px;
+}
+
+.review-body {
+  min-height: 38px;
+  padding: 11px 10px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.review-body p {
+  margin: 0;
+  color: #fff;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.no-reviews {
+  padding: 12px 0;
+}
+
+/* 리뷰 작성 폼 */
+.review-form {
+  display: block;
+  width: 100%;
+}
+
+.review-form .form-row {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin: 12px 0;
+}
+
+.review-form .form-row > label {
+  padding-top: 8px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px;
+  color: #222;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.review-form select {
+  width: 56px;
+}
+
+.review-form .review-input-area {
+  min-width: 0;
+}
+
+.review-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* 14-4: 빨간색 제출 버튼을 리뷰 입력칸 오른쪽 아래에 배치 */
+.review-form .btn-add-review {
+  display: block;
+  width: fit-content;
+  margin: 8px 0 0 auto;
+  padding: 10px 14px;
+  color: #fff;
+  background: #bd172b;
+  border: 1px solid #a91426;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.review-form .btn-add-review:hover {
+  background: #941324;
+}
+
+/* 오류 페이지 */
+.error-stack {
+  margin-top: 20px;
+  padding: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.18);
+  border-left: 3px solid #bd172b;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.error-page {
+  min-height: 250px;
+  padding-top: 4px;
+}
+
+.error-title {
+  margin: 0 0 14px;
+  padding: 0 0 12px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.35;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.error-divider {
+  display: none;
+}
+
+main a {
+  color: #17363a;
+}
+
+main a:hover {
+  color: #fff;
+}
+
+/* 하단 */
+.site-footer {
+  margin-top: 24px;
+  padding: 16px 0 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 작은 화면 */
+@media (max-width: 600px) {
+  .container,
+  .nav-inner {
+    width: 92%;
+  }
+
+  .location-title {
+    font-size: 26px;
+  }
+
+  .customer-reviews {
+    padding: 9px;
+  }
+
+  .review-meta {
+    gap: 5px;
+  }
+
+  .review-form .form-row {
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: 8px;
+  }
+}
+
+
+/* 14-5: Loc8r 홈페이지 */
+.home-title {
+  margin: 10px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-style: italic;
+  color: #8dd0d1;
+}
+
+.home-brand {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.home-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.location-list {
+  min-width: 0;
+}
+
+.location-card {
+  margin-bottom: 3px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.location-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.location-name {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.rating-stars {
+  color: #b4c9ca;
+  font-size: 17px;
+  letter-spacing: -2px;
+}
+
+.distance-badge {
+  padding: 4px 8px;
+  color: #fff;
+  background: #bd172b;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.home-address {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.facility-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.facility-badge {
+  padding: 3px 6px;
+  color: #fff;
+  background: #ff7900;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.home-intro {
+  padding: 0 0 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.home-intro p {
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-title {
+    font-size: 22px;
+  }
+
+  .home-brand {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,13 @@
+extends layout
+block content
+  .breadcrumb
+    a(href='/') Home
+    span  /  Review submitted
+  h1 리뷰가 제출되었습니다.
+  .panel
+    h2= location.name
+    p 리뷰 작성자: #{review.author}
+    p 평점: #{review.rating}/5
+    p= review.reviewText
+    a.btn(href=`/location/${location._id}/review/new`) 리뷰 더 작성하기
+    a.text-link(href='/') 홈으로 돌아가기

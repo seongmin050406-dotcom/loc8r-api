@@ -1,0 +1,16 @@
+{
+  "name": "loc8r-new",
+  "version": "1.0.0",
+  "description": "Clean Loc8r review form starter for assignment 14-1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.22.3",
+    "http-errors": "^2.0.1",
+    "morgan": "^1.12.1",
+    "pug": "^3.0.4"
+  }
+}
